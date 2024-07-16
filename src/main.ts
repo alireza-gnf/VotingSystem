@@ -66,7 +66,7 @@ app.post("/login", (req, res) => {
 
 // GET Visions Endpoint
 app.get("/visions", (req, res) => {
-  res.status(201).json({ data: visions.all() });
+  res.status(200).json({ data: visions.all() });
 });
 
 // POST Vision Endpoint
