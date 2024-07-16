@@ -22,7 +22,7 @@ class PlanManagement {
   }
 
   visionPlans(id: string): Array<Plan> {
-    return this.plans.filter((plan) => plan.id === id);
+    return this.plans.filter((plan) => plan.visionId === id);
   }
 
   find(id: string): Plan | undefined {
