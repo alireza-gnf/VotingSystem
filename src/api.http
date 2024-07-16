@@ -1,0 +1,76 @@
+// Register Fail
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "citizen",
+    "password": "weakpwd",
+}
+
+###
+// Register OK
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "goodCitizen",
+    "password": "strongPassword",
+}
+
+###
+// Login Fail
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "wrongUsername",
+    "password": "strongPassword",
+}
+
+###
+// Login OK
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "goodCitizen",
+    "password": "strongPassword",
+}
+
+###
+// Visions
+GET http://localhost:3000/visions
+
+###
+// Vision
+POST http://localhost:3000/visions
+Content-Type: application/json
+
+{
+    "title": "This is a title for vision",
+    "description": "This is a description for vision and some more.",
+    "planDateString": "2024-07-18T00:00:00",
+    "voteDateString": "2024-07-20T00:00:00"
+}
+
+###
+// Plans
+GET http://localhost:3000/visions/1/plans
+
+###
+// Plans
+POST http://localhost:3000/visions/1/plans
+Content-Type: application/json
+
+{
+    "title": "This is a title for vision",
+    "description": "This is a description for vision and some more.",
+}
+
+###
+// Votes
+GET http://localhost:3000/plans/1/votes
+
+###
+// Votes
+POST http://localhost:3000/plans/1/votes
